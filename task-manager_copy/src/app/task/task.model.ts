@@ -3,6 +3,6 @@ export class Task {
       public name: string,
       public description: string,
       public dueDate: Date,
-      public status: boolean // true for completed, false for pending
+      public status: boolean 
     ) {}
   }
