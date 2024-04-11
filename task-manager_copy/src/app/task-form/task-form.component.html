@@ -1,0 +1,12 @@
+<form class="container" #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <div class="content-box">
+      <div class="left"></div>
+      <div class="right">
+          <h2>Add New Task</h2>
+          <input type="text" class="field" id="name" placeholder="Name" name="name" ngModel required>
+          <textarea class="field area" placeholder="Description" name="description" ngModel></textarea>
+          <input type="date" class="field" placeholder="Due Date" name="dueDate" ngModel required>
+          <button type="submit" class="btn">Add Task</button>
+      </div>
+  </div>
+</form>

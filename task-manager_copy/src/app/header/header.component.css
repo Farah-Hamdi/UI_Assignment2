@@ -1,0 +1,30 @@
+#first {
+    color: #000;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+#second {
+    color: #0E6A99;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.nav-item a{
+    font-size: larger;
+    font-weight: bold;
+}
+
+#navbarNav{
+    justify-content: space-between;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar{
+    z-index: 1;
+}
+
+
+
