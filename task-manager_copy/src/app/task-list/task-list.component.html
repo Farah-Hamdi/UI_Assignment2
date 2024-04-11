@@ -4,9 +4,9 @@
        <h1>TO-DO </h1><br>
        <p>"We bring you the best task manager in town!"</p>
    </div>
-
+ 
    <h1>Tasks</h1><br>
-
+ 
    <table class="table table-hover table-bordered table-striped">
       <thead>
          <tr>
@@ -18,7 +18,7 @@
             <th>Actions</th>
          </tr>
       </thead>
-
+ 
       <tbody>
          <tr *ngFor="let task of tasks; let i = index">
             <td>{{ i + 1 }}</td>
@@ -26,16 +26,16 @@
             <td>{{ task.description }}</td>
             <td>{{ task.dueDate | date }}</td>
             <td>
-               <input type="checkbox" class="form-check-input" [checked]="task.status" (change)="onToggleTaskStatus(i)">
+              <input type="checkbox" [(ngModel)]="task.status" (change)="onToggleTaskStatus(task)">
             </td>
             <td>
-               <button class="btn btn-secondary">Edit</button>
-               <button class="btn btn-danger" (click)="onDeleteTask(i)">Delete</button>
+              <button class="btn btn-secondary" (click)="onEditTaskClicked(i)">Edit</button>
+              <button class="btn btn-danger" (click)="onDeleteTask(i)">Delete</button>
             </td>
          </tr>
       </tbody>
    </table>
    <button (click)="onAddTaskClicked()" class="btn btn-info">Add Task</button>
-   <app-task-form *ngIf="showTaskForm" (formSubmit)="onSubmitTaskForm($event)"></app-task-form>
-
-</div>
+   <app-task-form *ngIf="showForm" (formSubmit)="onSubmitTaskForm($event)"></app-task-form>
+ </div>
+ 
